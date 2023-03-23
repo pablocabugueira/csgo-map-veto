@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.980);
+    background-image: url(assets/background.png);
+    background-repeat: no-repeat;
+    background-position: center 130px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 95px;
+    flex-wrap: wrap;
+
+    padding: 30px;
+
+    color: white;
+    font-size: 2.6em;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+hr {
+    flex-grow: 1;
+
+    border: 1.5px solid #1EB720;
+    margin: 0px 50px;
+}
+
+#teamVeto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    padding-top: 50px;
+
+    color: white;
+    font-size: 1.8em;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.card {
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin: 120px 0px 0px 150px;    
+
+    height: 400px;
+    width: 300xp;
+}
+
+.de_dust2 {
+    background-image: url(assets/de_dust2.jpg);
+}
