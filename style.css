@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgba(0, 0, 0, 0.980);
+    background-color: rgba(0, 0, 0, 0.950);
     background-image: url(assets/background.png);
     background-repeat: no-repeat;
     background-position: center 130px;
@@ -46,16 +46,24 @@ hr {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.card {
-    background-repeat: no-repeat;
-    background-size: contain;
+#vetoContainer {
+    display: flex;
+    justify-content: space-evenly;
 
-    margin: 120px 0px 0px 150px;    
-
-    height: 400px;
-    width: 300xp;
+    margin: 120px 0px 0px 0px;
 }
 
-.de_dust2 {
-    background-image: url(assets/de_dust2.jpg);
+.mapImg {
+    border-radius: 10px;
+
+    height: 490px;
+    width: 290px;
+
+    object-fit: cover;
+}
+
+/* ANIMATION */
+
+.mapImg {
+    translate: ;
 }
