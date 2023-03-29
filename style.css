@@ -41,6 +41,7 @@ hr {
     flex-wrap: wrap;
 
     padding-top: 50px;
+    margin-bottom: 120px;
 
     color: white;
     font-size: 1.8em;
@@ -48,26 +49,99 @@ hr {
     font-weight: bold;
 }
 
+/* === CARDS === */
+
 #vetoContainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
 
-    margin: 120px 0px 0px 0px;
+    margin: 0px 20px;
 }
 
 .card {
     position: relative;
 
-    transition: transform .5s;
+    transition: transform .3s;
+
+    margin-bottom: 20px;
+
+    border-radius: 14px;
+    
+    height: 504px;
 }
 
 .card:hover {
-    transform: scale(0.95);
+    transform: scale(1.07);
+
     cursor: pointer;
+
+    border: 7px solid #E22859;
+}
+
+.card:hover .banText{
+    opacity: 1;
+}
+
+.card:hover .banIcon{
+    opacity: 1;
+}
+
+.banText {
+    background-color: #E22859;
+
+    height: 50px;
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    opacity: 0;
+
+    transition: opacity .3s ease-in-out;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px 8px 0px 0px;
+
+    color: white;
+    font-size: 2em;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.970);
+}
+
+.banIcon {
+    background-color: #E22859;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 42px;
+    
+    height: 60px;
+    width: 60px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    opacity: 0;
+
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out;
 }
 
 .mapImg {
-    border-radius: 10px;
+    border-radius: 8px;
 
     height: 490px;
     width: 320px;
@@ -76,16 +150,26 @@ hr {
 }
 
 .mapName {
-    position: relative;
-    top: -12%;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+
+    height: 40px;
 
     text-align: center;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.970);
+    
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out;
+    
+    width: 100%;
+}
 
+.mapName > span {
     color: white;
     font-size: 2em;
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.970);
 
     -webkit-user-select: none;
     -ms-user-select: none;
