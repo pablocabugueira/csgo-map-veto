@@ -9,6 +9,10 @@ body {
     background-image: url(assets/background.png);
     background-repeat: no-repeat;
     background-position: center 130px;
+
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 header {
@@ -170,8 +174,4 @@ hr {
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.970);
-
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
