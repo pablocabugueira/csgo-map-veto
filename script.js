@@ -1,14 +1,21 @@
-const card = document.querySelector(".card")
-const banText = document.querySelectorAll(".banText")
-const banIcon = document.querySelectorAll(".banIcon")
-const mapImg = document.querySelectorAll(".mapImg")
-const mapName = document.querySelector(".mapName")
+const team1 = "Time 1"
+const team2 = "Time 2"
+let teamTurn = team1
 
-card.addEventListener("click", function() {
-    banIcon.style.opacity = "1"
-    banText.style.opacity = "1"
-    mapImg.style.opacity = "0.15"
-    mapName.style.opacity = "0.15"
+let teamTurnText = document.querySelector("#teamVetoText")
 
-    banText.innerHTML = "VETADO"
-})
+function choosemap(event) {
+    if (teamTurn == team1) {
+        teamTurn = team2
+    } else {
+        teamTurn = team1
+    }
+
+    teamTurnText.innerHTML = `É a vez do ${teamTurn} vetar o mapa!`
+}
+
+const maps = document.querySelectorAll(".card")
+
+for (let index = 0; index < maps.length; index++) {
+    maps[index].addEventListener("click", choosemap)
+}
