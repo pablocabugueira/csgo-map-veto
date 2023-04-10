@@ -4,7 +4,13 @@ let teamTurn = team1
 
 let teamTurnText = document.querySelector("#teamVetoText")
 
-function choosemap(event) {
+const maps = document.querySelectorAll(".card")
+
+for (let index = 0; index < maps.length; index++) {
+    maps[index].addEventListener("click", chooseMap)
+}
+
+function chooseMap(event) {
     if (teamTurn == team1) {
         teamTurn = team2
     } else {
@@ -12,10 +18,4 @@ function choosemap(event) {
     }
 
     teamTurnText.innerHTML = `É a vez do ${teamTurn} vetar o mapa!`
-}
-
-const maps = document.querySelectorAll(".card")
-
-for (let index = 0; index < maps.length; index++) {
-    maps[index].addEventListener("click", choosemap)
 }
