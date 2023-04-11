@@ -17,5 +17,24 @@ function chooseMap(event) {
         teamTurn = team1
     }
 
-    teamTurnText.innerHTML = `É a vez do ${teamTurn} vetar o mapa!`
+    teamTurnText.innerHTML = `É a vez do ${teamTurn} banir o mapa!`
+
+    event.currentTarget.classList.remove("scaleAnimation")
+    event.currentTarget.classList.add("selected")
+}
+
+const banText = document.querySelectorAll(".banText")
+
+for (let index = 0; index < maps.length; index++) {
+    maps[index].addEventListener("click", () => {
+        banText[index].innerHTML = "Banido"
+    })
+}
+
+const mapImg = document.querySelectorAll(".mapImg")
+
+for (let index = 0; index < maps.length; index++) {
+    maps[index].addEventListener("click", () => {
+        mapImg[index].classList.add("mapImgAfterSelected")
+    })
 }

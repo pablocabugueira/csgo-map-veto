@@ -6,9 +6,6 @@
 
 body {
     background-color: rgba(0, 0, 0, 0.950);
-    background-image: url(assets/background.png);
-    background-repeat: no-repeat;
-    background-position: center 130px;
 
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -67,7 +64,7 @@ hr {
 .card {
     position: relative;
 
-    transition: transform .3s;
+    transition: transform .45s;
 
     margin-bottom: 20px;
 
@@ -76,8 +73,8 @@ hr {
     height: 504px;
 }
 
-.card:hover {
-    transform: scale(1.07);
+.scaleAnimation:hover {
+    transform: scale(1.05);
 
     cursor: pointer;
 
@@ -174,4 +171,19 @@ hr {
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.970);
+}
+
+.selected {
+    border: 7px solid #E22859;
+    cursor: not-allowed;
+    height: 492px;
+}
+
+.selected .banIcon, .selected .banText {
+    opacity: 1;
+}
+
+.mapImgAfterSelected {
+    height: 478px;
+    opacity: 0.04;
 }
