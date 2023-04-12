@@ -21,6 +21,7 @@ function chooseMap(event) {
 
     event.currentTarget.classList.remove("scaleAnimation")
     event.currentTarget.classList.add("selected")
+    event.currentTarget.removeEventListener("click", chooseMap)
 }
 
 const banText = document.querySelectorAll(".banText")
