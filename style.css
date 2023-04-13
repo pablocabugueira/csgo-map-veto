@@ -175,7 +175,9 @@ hr {
 
 .selected {
     border: 7px solid #E22859;
-    cursor: not-allowed;
+
+    pointer-events: none;
+
     height: 492px;
 }
 
@@ -185,5 +187,21 @@ hr {
 
 .mapImgAfterSelected {
     height: 478px;
+
     opacity: 0.04;
+}
+
+.picked {
+    border: 7px solid rgb(55, 233, 55);
+    
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.picked .banIcon {
+    display: none;
+}
+
+.picked .banIcon, .picked .banText{
+    display: none;
 }

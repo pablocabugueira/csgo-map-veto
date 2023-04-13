@@ -10,6 +10,8 @@ for (let index = 0; index < maps.length; index++) {
     maps[index].addEventListener("click", chooseMap)
 }
 
+let mapPool = ["Dust 2", "Inferno", "Mirage", "Overpass"]
+
 function chooseMap(event) {
     if (teamTurn == team1) {
         teamTurn = team2
@@ -17,18 +19,29 @@ function chooseMap(event) {
         teamTurn = team1
     }
 
-    teamTurnText.innerHTML = `É a vez do ${teamTurn} banir o mapa!`
+    teamTurnText.innerText = `É a vez do ${teamTurn} banir o mapa!`
 
     event.currentTarget.classList.remove("scaleAnimation")
     event.currentTarget.classList.add("selected")
     event.currentTarget.removeEventListener("click", chooseMap)
+
+    const clickedMap = event.currentTarget.querySelector(".nameOfTheMap").innerText
+
+    mapPool = mapPool.filter(map => map != clickedMap)
+
+    if (mapPool.length == 1) {
+        const lastMap = document.querySelector(".card:not(.selected)")
+        lastMap.classList.add("picked")
+        lastMap.classList.remove("scaleAnimation")
+        teamTurnText.innerText = `${mapPool[0]} foi o mapa escolhido!`
+    }
 }
 
 const banText = document.querySelectorAll(".banText")
 
 for (let index = 0; index < maps.length; index++) {
     maps[index].addEventListener("click", () => {
-        banText[index].innerHTML = "Banido"
+        banText[index].innerText = "Banido"
     })
 }
 
