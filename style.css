@@ -193,7 +193,7 @@ hr {
 
 .picked {
     border: 7px solid rgb(55, 233, 55);
-    
+
     cursor: not-allowed;
     pointer-events: none;
 }
@@ -204,4 +204,112 @@ hr {
 
 .picked .banIcon, .picked .banText{
     display: none;
+}
+
+/* === RESPONSIVE === */
+
+@media screen and (max-width: 737px) {
+    .card {
+        height: 374px;
+    }
+
+    .mapImg {
+        height: 361px;
+        width: 230px;
+    }
+}
+
+@media screen and (max-width: 671px) {
+    header {
+        font-size: 2em;
+    }
+
+    #teamVeto {
+        font-size: 1.2em;
+    }
+
+    .card {
+        height: 324px;
+    }
+
+    .mapImg {
+        height: 311px;
+        width: 210px;
+    }
+}
+
+@media screen and (max-width: 529px) {
+    header {
+        font-size: 1.8em;
+    }
+
+    #teamVeto {
+        font-size: 1em;
+    }
+
+    .card {
+        height: 254px;
+    }
+
+    .mapImg {
+        height: 241px;
+        width: 165px;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    header {
+        font-size: 1.5em;
+    }
+
+    #teamVeto {
+        font-size: 0.8em;
+    }
+
+    .card {
+        height: 254px;
+    }
+
+    .mapImg {
+        height: 241px;
+        width: 165px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    header {
+        font-size: 1.35em;
+    }
+
+    #teamVeto {
+        font-size: 0.75em;
+    }
+
+    .card {
+        height: 234px;
+    }
+
+    .mapImg {
+        height: 221px;
+        width: 145px;
+    }
+}
+
+@media screen and (max-width: 422px) {
+    header {
+        font-size: 1em;
+    }
+
+    #teamVeto {
+        font-size: 0.6em;
+    }
+
+    .card {
+        height: 224px;
+    }
+
+    .mapImg {
+        height: 211px;
+        width: 155px;
+    }
 }
